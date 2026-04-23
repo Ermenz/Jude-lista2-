@@ -1,0 +1,21 @@
+N = int(input())
+
+# Lista para guardar apenas os nomes que atendem à condição
+nomes_validos = []
+
+for i in range(N):
+    entrada = input().split()
+    nome = entrada[0]
+    numero = int(entrada[1])
+
+    # Se a condição for atendida, guardamos o nome na lista
+    if 2 <= numero <= 4:
+        nomes_validos.append(nome)
+
+# Verificação final após o loop
+if len(nomes_validos) > 0:
+    # Imprime cada nome na ordem que foi adicionado
+    for n in nomes_validos:
+        print(n)
+else:
+    print("Ninguem focado hoje")
